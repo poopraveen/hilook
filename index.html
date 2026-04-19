@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HiLook Interior | Transform Your Space Into a Dream Home</title>
+  <meta name="description" content="HiLook Interior – Premium interior design & home renovation services. Expert designers, lifetime warranty, 45-day move-in guarantee." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-logo">HiLook<span style="color:#fff;font-size:1rem;font-family:Inter,sans-serif;letter-spacing:2px;"> Interior</span></div>
+  <div class="preloader-bar"><div class="preloader-fill"></div></div>
+</div>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
+  <a href="#how-it-works" onclick="closeMobile()">How It Works</a>
+  <a href="#packages" onclick="closeMobile()">Packages</a>
+  <a href="#calculator" onclick="closeMobile()">Get Quote</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</nav>
+
+<!-- NAVBAR -->
+<header id="navbar">
+  <a href="#" class="nav-logo">Hi<span>Look</span> Interior</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#calculator">Quote</a></li>
+    <li><a href="#contact" class="nav-cta">Get Free Quote</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fa-solid fa-star"></i> Award Winning Interior Design</div>
+    <h1 class="hero-title">
+      Transform Your Space Into a <span class="gold">Dream Home</span>
+    </h1>
+    <p class="hero-sub">From concept to completion — we design, deliver, and install stunning interiors that reflect your personality and lifestyle.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Get Free Consultation</a>
+      <a href="#portfolio" class="btn-outline"><i class="fa-regular fa-images"></i> View Portfolio</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">5000+</div><div class="lbl">Happy Homes</div></div>
+    <div class="hero-stat"><div class="num">200+</div><div class="lbl">Expert Designers</div></div>
+    <div class="hero-stat"><div class="num">15+</div><div class="lbl">Years Experience</div></div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack">
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> Full Home Interiors</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> Modular Kitchen</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> Wardrobe Solutions</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> False Ceiling</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> Luxury Designs</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> 45-Day Move-In</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> Lifetime Warranty</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> 100+ Quality Checks</div>
+    <!-- Duplicate for seamless loop -->
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> Full Home Interiors</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> Modular Kitchen</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> Wardrobe Solutions</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> False Ceiling</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> Luxury Designs</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> 45-Day Move-In</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> Lifetime Warranty</div>
+    <div class="marquee-item"><i class="fa-solid fa-circle"></i> 100+ Quality Checks</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header">
+    <span class="section-tag">What We Offer</span>
+    <h2 class="section-title">Our <span>Design Services</span></h2>
+    <p class="section-sub">From complete home transformations to modular solutions — we handle every detail so you don't have to.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&q=80" alt="Full Home Interiors" loading="lazy" />
+        <div class="service-img-overlay"></div>
+      </div>
+      <div class="service-body">
+        <div class="service-icon"><i class="fa-solid fa-house"></i></div>
+        <h3>Full Home Interiors</h3>
+        <p>Complete turnkey interior solutions from design to installation with 100+ quality checks included.</p>
+        <a href="#contact" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Modular Kitchen" loading="lazy" />
+        <div class="service-img-overlay"></div>
+      </div>
+      <div class="service-body">
+        <div class="service-icon"><i class="fa-solid fa-utensils"></i></div>
+        <h3>Modular Kitchen</h3>
+        <p>Sleek, functional kitchens built with premium finishes and smart storage solutions for modern living.</p>
+        <a href="#contact" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80" alt="Bedroom Design" loading="lazy" />
+        <div class="service-img-overlay"></div>
+      </div>
+      <div class="service-body">
+        <div class="service-icon"><i class="fa-solid fa-bed"></i></div>
+        <h3>Bedroom Design</h3>
+        <p>Create your perfect sanctuary with bespoke bedroom designs tailored to your comfort and style.</p>
+        <a href="#contact" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Living Room" loading="lazy" />
+        <div class="service-img-overlay"></div>
+      </div>
+      <div class="service-body">
+        <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
+        <h3>Living Room</h3>
+        <p>Statement living spaces designed to impress — perfect for entertaining and everyday relaxation.</p>
+        <a href="#contact" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Bathroom Design" loading="lazy" />
+        <div class="service-img-overlay"></div>
+      </div>
+      <div class="service-body">
+        <div class="service-icon"><i class="fa-solid fa-shower"></i></div>
+        <h3>Bathroom & Spa</h3>
+        <p>Luxurious bathroom transformations with premium fixtures, tiles, and spa-like finishes.</p>
+        <a href="#contact" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Wardrobe" loading="lazy" />
+        <div class="service-img-overlay"></div>
+      </div>
+      <div class="service-body">
+        <div class="service-icon"><i class="fa-solid fa-shirt"></i></div>
+        <h3>Wardrobe Solutions</h3>
+        <p>Custom walk-in and built-in wardrobes with smart organization systems and premium finishes.</p>
+        <a href="#contact" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Office Interior" loading="lazy" />
+        <div class="service-img-overlay"></div>
+      </div>
+      <div class="service-body">
+        <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Office Interiors</h3>
+        <p>Professional workspace designs that boost productivity, creativity, and company culture.</p>
+        <a href="#contact" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="False Ceiling" loading="lazy" />
+        <div class="service-img-overlay"></div>
+      </div>
+      <div class="service-body">
+        <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3>False Ceiling & Lighting</h3>
+        <p>Dramatic false ceiling designs with integrated LED lighting for ambiance and visual impact.</p>
+        <a href="#contact" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="5000">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Happy Homes Delivered</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="200">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Expert Designers</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="100">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Quality Checks Per Project</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="15">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Years of Excellence</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="98">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">% Customer Satisfaction</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="section-header center">
+    <span class="section-tag">Our Process</span>
+    <h2 class="section-title">How We <span>Work</span></h2>
+    <p class="section-sub">A seamless journey from your first call to your dream home — handled by our expert team every step of the way.</p>
+  </div>
+  <div class="steps-container">
+    <div class="step-item reveal">
+      <div class="step-num">01</div>
+      <h4>Free Consultation</h4>
+      <p>Share your vision, budget, and timeline with our design expert in a zero-commitment consultation.</p>
+    </div>
+    <div class="step-item reveal">
+      <div class="step-num">02</div>
+      <h4>Design & Planning</h4>
+      <p>Our designers create detailed 3D renders and floor plans tailored to your unique style.</p>
+    </div>
+    <div class="step-item reveal">
+      <div class="step-num">03</div>
+      <h4>Material Selection</h4>
+      <p>Choose from 10,000+ curated materials, finishes, and fixtures at our experience centers.</p>
+    </div>
+    <div class="step-item reveal">
+      <div class="step-num">04</div>
+      <h4>Execution & Installation</h4>
+      <p>Our skilled craftsmen execute the design with precision, 100+ quality checks, and zero mess.</p>
+    </div>
+    <div class="step-item reveal">
+      <div class="step-num">05</div>
+      <h4>Move In & Handover</h4>
+      <p>Move into your dream home within 45 days — guaranteed. Backed by our lifetime warranty.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="section-header">
+    <span class="section-tag">Our Work</span>
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+    <p class="section-sub">A glimpse into the beautiful spaces we've created for our clients across India.</p>
+  </div>
+  <div class="portfolio-filters reveal">
+    <button class="filter-btn active" data-filter="all">All Projects</button>
+    <button class="filter-btn" data-filter="living">Living Room</button>
+    <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+    <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+    <button class="filter-btn" data-filter="bathroom">Bathroom</button>
+    <button class="filter-btn" data-filter="office">Office</button>
+  </div>
+  <div class="portfolio-grid" id="portfolioGrid">
+    <div class="portfolio-item wide" data-category="living">
+      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=80" alt="Modern Living Room" loading="lazy" />
+      <div class="portfolio-overlay"><div class="portfolio-info"><h4>Modern Luxe Living</h4><span>Living Room</span></div></div>
+    </div>
+    <div class="portfolio-item" data-category="kitchen">
+      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Modern Kitchen" loading="lazy" />
+      <div class="portfolio-overlay"><div class="portfolio-info"><h4>Matte Black Kitchen</h4><span>Kitchen</span></div></div>
+    </div>
+    <div class="portfolio-item tall" data-category="bedroom">
+      <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80" alt="Bedroom" loading="lazy" />
+      <div class="portfolio-overlay"><div class="portfolio-info"><h4>Minimal Master Suite</h4><span>Bedroom</span></div></div>
+    </div>
+    <div class="portfolio-item" data-category="living">
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Living Room" loading="lazy" />
+      <div class="portfolio-overlay"><div class="portfolio-info"><h4>Contemporary Lounge</h4><span>Living Room</span></div></div>
+    </div>
+    <div class="portfolio-item" data-category="bathroom">
+      <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Bathroom" loading="lazy" />
+      <div class="portfolio-overlay"><div class="portfolio-info"><h4>Spa-Style Bathroom</h4><span>Bathroom</span></div></div>
+    </div>
+    <div class="portfolio-item wide" data-category="office">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80" alt="Office" loading="lazy" />
+      <div class="portfolio-overlay"><div class="portfolio-info"><h4>Executive Office Space</h4><span>Office</span></div></div>
+    </div>
+    <div class="portfolio-item" data-category="kitchen">
+      <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=600&q=80" alt="Kitchen 2" loading="lazy" />
+      <div class="portfolio-overlay"><div class="portfolio-info"><h4>Scandinavian Kitchen</h4><span>Kitchen</span></div></div>
+    </div>
+    <div class="portfolio-item" data-category="living">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Living 2" loading="lazy" />
+      <div class="portfolio-overlay"><div class="portfolio-info"><h4>Warm Bohemian Living</h4><span>Living Room</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE CALCULATOR -->
+<section id="calculator">
+  <div class="section-header center">
+    <span class="section-tag">Pricing</span>
+    <h2 class="section-title light">Get an Instant <span>Quote</span></h2>
+    <p class="section-sub">Use our smart calculator to get a realistic price estimate for your home interior project.</p>
+  </div>
+  <div class="calc-wrapper">
+    <div class="calc-form reveal-left">
+      <h3>Configure Your Project</h3>
+      <div class="calc-group">
+        <label>Property Type</label>
+        <select id="propType">
+          <option value="">Select Property Type</option>
+          <option value="1bhk">1 BHK Apartment</option>
+          <option value="2bhk">2 BHK Apartment</option>
+          <option value="3bhk">3 BHK Apartment</option>
+          <option value="4bhk">4 BHK / Penthouse</option>
+          <option value="villa">Independent Villa</option>
+        </select>
+      </div>
+      <div class="calc-group">
+        <label>Design Style</label>
+        <select id="designStyle">
+          <option value="">Select Design Style</option>
+          <option value="essential">Essential (Budget-Friendly)</option>
+          <option value="premium">Premium (Most Popular)</option>
+          <option value="luxury">Luxury (Top-of-the-Line)</option>
+        </select>
+      </div>
+      <div class="calc-group">
+        <label>Carpet Area (sq ft)</label>
+        <input type="number" id="carpetArea" placeholder="e.g. 1000" min="200" max="10000" />
+      </div>
+      <div class="calc-group">
+        <label>Select Rooms to Design</label>
+        <div class="rooms-check">
+          <label class="room-option"><input type="checkbox" value="living" checked /> <span>Living Room</span></label>
+          <label class="room-option"><input type="checkbox" value="kitchen" checked /> <span>Kitchen</span></label>
+          <label class="room-option"><input type="checkbox" value="master" checked /> <span>Master Bedroom</span></label>
+          <label class="room-option"><input type="checkbox" value="bedroom2" /> <span>Bedroom 2</span></label>
+          <label class="room-option"><input type="checkbox" value="bedroom3" /> <span>Bedroom 3</span></label>
+          <label class="room-option"><input type="checkbox" value="bathroom" /> <span>Bathroom(s)</span></label>
+          <label class="room-option"><input type="checkbox" value="office" /> <span>Home Office</span></label>
+          <label class="room-option"><input type="checkbox" value="puja" /> <span>Pooja Room</span></label>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calculateQuote()">
+        <i class="fa-solid fa-calculator"></i> Calculate My Quote
+      </button>
+    </div>
+
+    <div class="calc-result reveal-right" id="calcResult">
+      <div class="calc-result-placeholder" id="calcPlaceholder">
+        <i class="fa-solid fa-home"></i>
+        <p>Fill in your project details and click<br/><strong style="color:rgba(255,255,255,0.6)">Calculate My Quote</strong> to see your estimate.</p>
+      </div>
+      <div class="result-content" id="resultContent">
+        <div class="result-label">Estimated Price Range</div>
+        <div class="result-price" id="resultPrice">₹0</div>
+        <div class="result-price-sub" id="resultSub">Based on your selections</div>
+        <div class="result-breakdown" id="resultBreakdown"></div>
+        <ul class="result-includes">
+          <li><i class="fa-solid fa-check"></i> Design & 3D Visualization</li>
+          <li><i class="fa-solid fa-check"></i> Project Management</li>
+          <li><i class="fa-solid fa-check"></i> 100+ Quality Checks</li>
+          <li><i class="fa-solid fa-check"></i> Lifetime Warranty on Products</li>
+          <li><i class="fa-solid fa-check"></i> 45-Day Move-In Guarantee</li>
+        </ul>
+        <button class="get-quote-btn" onclick="openQuoteModal()">
+          <i class="fa-brands fa-telegram"></i> Send Me This Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why-us">
+  <div class="why-grid">
+    <div class="why-image reveal-left">
+      <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80" alt="Why HiLook Interior" loading="lazy" />
+      <div class="why-badge-float">
+        <div class="big-num">15+</div>
+        <p>Years of Design<br/>Excellence</p>
+      </div>
+    </div>
+    <div class="reveal-right">
+      <span class="section-tag">Why Choose Us</span>
+      <h2 class="section-title">The HiLook <span>Difference</span></h2>
+      <p class="section-sub" style="margin-bottom:40px">We don't just design spaces — we craft experiences that stand the test of time.</p>
+      <div class="why-features">
+        <div class="why-feature">
+          <div class="why-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div>
+            <h4>Lifetime Warranty</h4>
+            <p>Every product and installation comes with our industry-leading lifetime warranty coverage.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <h4>45-Day Move-In Guarantee</h4>
+            <p>We commit to delivering your complete interior on time — guaranteed or we compensate you.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <div>
+            <h4>100+ Quality Checks</h4>
+            <p>Every project passes through over 100 quality checkpoints before we hand over the keys.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon"><i class="fa-solid fa-paintbrush"></i></div>
+          <div>
+            <h4>Certified Expert Designers</h4>
+            <p>Our team of 200+ certified interior designers brings global trends to your home.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+          <div>
+            <h4>Transparent Fixed Pricing</h4>
+            <p>No hidden costs — what you're quoted is exactly what you pay, with EMI options available.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="section-header center">
+    <span class="section-tag">Pricing Plans</span>
+    <h2 class="section-title">Choose Your <span>Package</span></h2>
+    <p class="section-sub">Transparent, all-inclusive pricing designed to suit every budget and lifestyle.</p>
+  </div>
+  <div class="packages-grid">
+    <div class="package-card reveal">
+      <div class="package-name">Essential</div>
+      <div class="package-price">₹3.5L+</div>
+      <div class="package-price-sub">Starting price for 1 BHK</div>
+      <ul class="package-features">
+        <li><i class="fa-solid fa-check"></i> Full home interior design</li>
+        <li><i class="fa-solid fa-check"></i> Standard material palette</li>
+        <li><i class="fa-solid fa-check"></i> Modular kitchen</li>
+        <li><i class="fa-solid fa-check"></i> 1 master bedroom wardrobe</li>
+        <li><i class="fa-solid fa-check"></i> Basic false ceiling</li>
+        <li><i class="fa-solid fa-check"></i> 3-year product warranty</li>
+        <li><i class="fa-solid fa-times" style="color:#ccc"></i> <span style="opacity:0.4">Luxury finishes</span></li>
+      </ul>
+      <button class="package-btn package-btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
+    </div>
+    <div class="package-card featured reveal">
+      <div class="featured-tag">Popular</div>
+      <div class="package-name">Premium</div>
+      <div class="package-price" style="color:var(--primary)">₹6.5L+</div>
+      <div class="package-price-sub" style="color:rgba(255,255,255,0.4)">Starting price for 2 BHK</div>
+      <ul class="package-features">
+        <li><i class="fa-solid fa-check"></i> Complete turnkey interior</li>
+        <li><i class="fa-solid fa-check"></i> Premium material palette</li>
+        <li><i class="fa-solid fa-check"></i> Designer modular kitchen</li>
+        <li><i class="fa-solid fa-check"></i> All bedroom wardrobes</li>
+        <li><i class="fa-solid fa-check"></i> Designer false ceiling</li>
+        <li><i class="fa-solid fa-check"></i> Lifetime product warranty</li>
+        <li><i class="fa-solid fa-check"></i> 3D design visualization</li>
+      </ul>
+      <button class="package-btn package-btn-filled" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
+    </div>
+    <div class="package-card reveal">
+      <div class="package-name">Luxury</div>
+      <div class="package-price">₹14L+</div>
+      <div class="package-price-sub">Starting price for 3 BHK</div>
+      <ul class="package-features">
+        <li><i class="fa-solid fa-check"></i> Ultra-luxury full home</li>
+        <li><i class="fa-solid fa-check"></i> Imported material palette</li>
+        <li><i class="fa-solid fa-check"></i> Bespoke kitchen design</li>
+        <li><i class="fa-solid fa-check"></i> Walk-in wardrobe</li>
+        <li><i class="fa-solid fa-check"></i> Statement ceiling designs</li>
+        <li><i class="fa-solid fa-check"></i> Lifetime warranty + AMC</li>
+        <li><i class="fa-solid fa-check"></i> Dedicated design manager</li>
+      </ul>
+      <button class="package-btn package-btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-header center">
+    <span class="section-tag">Client Stories</span>
+    <h2 class="section-title">What Our <span>Clients Say</span></h2>
+    <p class="section-sub">Thousands of happy homeowners can't be wrong. Here's what they have to say about HiLook Interior.</p>
+  </div>
+  <div class="testimonials-slider">
+    <div class="testimonials-track" id="tTrack">
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="testimonial-text">"HiLook transformed our 3BHK completely within 42 days. The 3D visualization was spot-on and the craftsmen were incredibly professional. Every single detail was perfect."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RK</div>
+          <div class="author-info"><h5>Rajesh Kumar</h5><span>3 BHK, Chennai</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="testimonial-text">"The modular kitchen they designed is absolutely stunning. We had a very specific vision and HiLook's team delivered beyond our expectations. Value for money is excellent."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PL</div>
+          <div class="author-info"><h5>Priya Lakshmi</h5><span>2 BHK, Bangalore</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="testimonial-text">"From first call to handover — seamless! Our dedicated designer Kavitha was available at every step. The quality checks really show in the final outcome. Highly recommend!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AM</div>
+          <div class="author-info"><h5>Arjun Mehta</h5><span>Villa, Hyderabad</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="testimonial-text">"The bathroom renovation was beyond what I imagined. The team's attention to detail and the quality of materials used is outstanding. My friends can't stop complimenting it."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SN</div>
+          <div class="author-info"><h5>Sneha Nair</h5><span>4 BHK, Mumbai</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="testimonial-text">"Transparent pricing, no hidden charges — exactly what was quoted is what we paid. The EMI option made it very manageable. Would definitely work with HiLook again."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">VR</div>
+          <div class="author-info"><h5>Venkat Rao</h5><span>2 BHK, Coimbatore</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="testimonial-text">"Office interior done in 3 weeks! Professional team, beautiful minimalist design, and the false ceiling with LED lighting changed the entire ambiance. Our employees love it."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">DK</div>
+          <div class="author-info"><h5>Deepak Krishnan</h5><span>Office, Chennai</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonial-controls">
+    <button class="t-btn" onclick="slideTest(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+    <div class="t-dots" id="tDots"></div>
+    <button class="t-btn" onclick="slideTest(1)"><i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta">
+  <h2>Ready to Transform Your Home?</h2>
+  <p>Book a free consultation today and get a personalised design proposal within 48 hours.</p>
+  <div class="cta-actions">
+    <a href="#contact" class="btn-dark"><i class="fa-solid fa-calendar-check"></i> Book Free Consultation</a>
+    <a href="tel:+919876543210" class="btn-outline-dark"><i class="fa-solid fa-phone"></i> Call Us Now</a>
+  </div>
+</section>
+
+<!-- CONTACT / QUOTE FORM -->
+<section id="contact">
+  <div class="section-header">
+    <span class="section-tag">Get In Touch</span>
+    <h2 class="section-title light">Start Your <span>Dream Project</span></h2>
+    <p class="section-sub">Fill in your details and our design expert will contact you within 2 hours.</p>
+  </div>
+  <div class="contact-wrapper">
+    <div class="contact-info reveal-left">
+      <h3>Let's Build Something Beautiful Together</h3>
+      <p>Whether you're planning a full home renovation or just need a single room refreshed — we're here to make it happen. Our consultation is completely free and zero-commitment.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="contact-item-text"><h5>Phone & WhatsApp</h5><p>+91 98765 43210</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-item-text"><h5>Email</h5><p>hello@hilookinterior.com</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contact-item-text"><h5>Experience Centers</h5><p>Chennai · Bangalore · Mumbai · Hyderabad</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
+          <div class="contact-item-text"><h5>Working Hours</h5><p>Mon – Sat: 9:00 AM – 7:00 PM</p></div>
+        </div>
+      </div>
+      <div class="contact-socials">
+        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="https://t.me/Hilookinterior_bot" class="social-btn" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+    </div>
+    <div class="quote-form reveal-right">
+      <h3 class="form-title">Get Your Free Quote</h3>
+      <div id="formContainer">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" id="fname" placeholder="Your full name" />
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" id="fphone" placeholder="+91 98765 43210" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" id="femail" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label>City *</label>
+            <select id="fcity">
+              <option value="">Select City</option>
+              <option>Chennai</option>
+              <option>Bangalore</option>
+              <option>Mumbai</option>
+              <option>Hyderabad</option>
+              <option>Delhi NCR</option>
+              <option>Pune</option>
+              <option>Coimbatore</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Property Type</label>
+            <select id="fprop">
+              <option value="">Select Type</option>
+              <option>1 BHK Apartment</option>
+              <option>2 BHK Apartment</option>
+              <option>3 BHK Apartment</option>
+              <option>4 BHK / Penthouse</option>
+              <option>Independent Villa</option>
+              <option>Office Space</option>
+              <option>Commercial Space</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Service Required</label>
+            <select id="fservice">
+              <option value="">Select Service</option>
+              <option>Full Home Interiors</option>
+              <option>Modular Kitchen</option>
+              <option>Bedroom Design</option>
+              <option>Living Room</option>
+              <option>Bathroom Renovation</option>
+              <option>Wardrobe Solution</option>
+              <option>Office Interiors</option>
+              <option>False Ceiling</option>
+              <option>Multiple Services</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Budget Range</label>
+            <select id="fbudget">
+              <option value="">Select Budget</option>
+              <option>₹2L – ₹5L</option>
+              <option>₹5L – ₹10L</option>
+              <option>₹10L – ₹20L</option>
+              <option>₹20L – ₹50L</option>
+              <option>₹50L+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Timeline</label>
+            <select id="ftimeline">
+              <option value="">When to Start</option>
+              <option>Immediately</option>
+              <option>Within 1 month</option>
+              <option>Within 3 months</option>
+              <option>Within 6 months</option>
+              <option>Just Exploring</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Tell Us About Your Project</label>
+          <textarea id="fmessage" placeholder="Describe your vision, specific requirements, or any questions you have..."></textarea>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="fconsent" checked />
+          <label for="fconsent">I agree to be contacted by HiLook Interior via phone, WhatsApp, and email regarding my inquiry.</label>
+        </div>
+        <button class="form-submit" id="submitBtn" onclick="submitQuote()">
+          <span class="btn-text"><i class="fa-brands fa-telegram"></i> Submit Application</span>
+          <span class="btn-loader"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+        </button>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+        <h4>Application Submitted!</h4>
+        <p>Thank you! Our design expert will call you within <strong style="color:var(--primary)">2 hours</strong>.<br/>You'll also receive a confirmation on Telegram.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">Hi<span>Look</span> Interior</a>
+      <p>Transforming homes into dream spaces since 2010. India's most trusted interior design company with 5000+ happy homes across 20+ cities.</p>
+      <div class="contact-socials">
+        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-pinterest"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-h">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Full Home Interiors</a></li>
+        <li><a href="#services">Modular Kitchen</a></li>
+        <li><a href="#services">Wardrobe Solutions</a></li>
+        <li><a href="#services">Bedroom Design</a></li>
+        <li><a href="#services">Bathroom Renovation</a></li>
+        <li><a href="#services">Office Interiors</a></li>
+        <li><a href="#services">False Ceiling</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-h">Company</div>
+      <ul class="footer-links">
+        <li><a href="#why-us">About Us</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-newsletter">
+      <div class="footer-h">Stay Inspired</div>
+      <p>Get design tips, trends, and exclusive offers delivered to your inbox.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Enter your email" id="nlEmail" />
+        <button onclick="subscribeNewsletter()"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 HiLook Interior. All rights reserved. Made with <i class="fa-solid fa-heart" style="color:var(--primary)"></i> in India.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-cta">
+  <a href="https://t.me/Hilookinterior_bot" target="_blank" class="float-btn telegram">
+    <i class="fa-brands fa-telegram"></i> Chat on Telegram
+  </a>
+  <a href="#contact" class="float-btn">
+    <i class="fa-solid fa-star"></i> Free Quote
+  </a>
+</div>
+
+<!-- QUOTE MODAL (from calculator) -->
+<div class="modal-overlay" id="quoteModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeQuoteModal()"><i class="fa-solid fa-xmark"></i></button>
+    <h3 style="font-family:var(--font-heading);color:var(--white);font-size:1.5rem;margin-bottom:8px">Send My Quote</h3>
+    <p style="color:rgba(255,255,255,0.5);font-size:0.88rem;margin-bottom:28px">Enter your details and we'll send the full quote to you instantly.</p>
+    <div class="form-group"><label>Full Name</label><input type="text" id="mname" placeholder="Your name" /></div>
+    <div class="form-group"><label>Phone Number</label><input type="tel" id="mphone" placeholder="+91 98765 43210" /></div>
+    <div class="form-group"><label>Email</label><input type="email" id="memail" placeholder="your@email.com" /></div>
+    <button class="form-submit" id="modalSubmitBtn" onclick="submitModalQuote()">
+      <span class="btn-text"><i class="fa-brands fa-telegram"></i> Send My Quote Now</span>
+      <span class="btn-loader"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+    </button>
+    <p style="color:rgba(255,255,255,0.3);font-size:0.78rem;text-align:center;margin-top:16px">Your details are safe with us. No spam, ever.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
