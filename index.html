@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HiLook Interior | Transform Your Space Into a Dream Home</title>
   <meta name="description" content="HiLook Interior – Premium interior design & home renovation services. Expert designers, lifetime warranty, 45-day move-in guarantee." />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="HiLook Interior | Transform Your Space Into a Dream Home" />
+  <meta property="og:description" content="Premium interior design & home renovation services. Expert designers, lifetime warranty, 45-day move-in guarantee. Get a free consultation today." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hilookinterior.com/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="HiLook Interior" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HiLook Interior | Transform Your Space Into a Dream Home" />
+  <meta name="twitter:description" content="Premium interior design & home renovation. Lifetime warranty, 45-day move-in guarantee." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
@@ -21,10 +39,12 @@
 
 <!-- MOBILE MENU -->
 <nav class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMobile()" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
   <a href="#services" onclick="closeMobile()">Services</a>
   <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
   <a href="#how-it-works" onclick="closeMobile()">How It Works</a>
   <a href="#packages" onclick="closeMobile()">Packages</a>
+  <a href="#faq" onclick="closeMobile()">FAQ</a>
   <a href="#calculator" onclick="closeMobile()">Get Quote</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
 </nav>
@@ -37,6 +57,7 @@
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="#packages">Packages</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#calculator">Quote</a></li>
     <li><a href="#contact" class="nav-cta">Get Free Quote</a></li>
   </ul>
@@ -105,7 +126,7 @@
 
     <div class="service-card reveal">
       <div class="service-img">
-        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&q=80" alt="Full Home Interiors" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&q=80" alt="Full Home Interiors" loading="lazy" onerror="this.parentElement.classList.add('img-error')" />
         <div class="service-img-overlay"></div>
       </div>
       <div class="service-body">
@@ -118,7 +139,7 @@
 
     <div class="service-card reveal">
       <div class="service-img">
-        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Modular Kitchen" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Modular Kitchen" loading="lazy" onerror="this.parentElement.classList.add('img-error')" />
         <div class="service-img-overlay"></div>
       </div>
       <div class="service-body">
@@ -131,7 +152,7 @@
 
     <div class="service-card reveal">
       <div class="service-img">
-        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80" alt="Bedroom Design" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80" alt="Bedroom Design" loading="lazy" onerror="this.parentElement.classList.add('img-error')" />
         <div class="service-img-overlay"></div>
       </div>
       <div class="service-body">
@@ -144,7 +165,7 @@
 
     <div class="service-card reveal">
       <div class="service-img">
-        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Living Room" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Living Room" loading="lazy" onerror="this.parentElement.classList.add('img-error')" />
         <div class="service-img-overlay"></div>
       </div>
       <div class="service-body">
@@ -157,12 +178,12 @@
 
     <div class="service-card reveal">
       <div class="service-img">
-        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Bathroom Design" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Bathroom Design" loading="lazy" onerror="this.parentElement.classList.add('img-error')" />
         <div class="service-img-overlay"></div>
       </div>
       <div class="service-body">
         <div class="service-icon"><i class="fa-solid fa-shower"></i></div>
-        <h3>Bathroom & Spa</h3>
+        <h3>Bathroom &amp; Spa</h3>
         <p>Luxurious bathroom transformations with premium fixtures, tiles, and spa-like finishes.</p>
         <a href="#contact" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -170,7 +191,7 @@
 
     <div class="service-card reveal">
       <div class="service-img">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Wardrobe" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Wardrobe" loading="lazy" onerror="this.parentElement.classList.add('img-error')" />
         <div class="service-img-overlay"></div>
       </div>
       <div class="service-body">
@@ -183,7 +204,7 @@
 
     <div class="service-card reveal">
       <div class="service-img">
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Office Interior" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Office Interior" loading="lazy" onerror="this.parentElement.classList.add('img-error')" />
         <div class="service-img-overlay"></div>
       </div>
       <div class="service-body">
@@ -196,12 +217,12 @@
 
     <div class="service-card reveal">
       <div class="service-img">
-        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="False Ceiling" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="False Ceiling" loading="lazy" onerror="this.parentElement.classList.add('img-error')" />
         <div class="service-img-overlay"></div>
       </div>
       <div class="service-body">
         <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
-        <h3>False Ceiling & Lighting</h3>
+        <h3>False Ceiling &amp; Lighting</h3>
         <p>Dramatic false ceiling designs with integrated LED lighting for ambiance and visual impact.</p>
         <a href="#contact" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -256,7 +277,7 @@
     </div>
     <div class="step-item reveal">
       <div class="step-num">02</div>
-      <h4>Design & Planning</h4>
+      <h4>Design &amp; Planning</h4>
       <p>Our designers create detailed 3D renders and floor plans tailored to your unique style.</p>
     </div>
     <div class="step-item reveal">
@@ -266,12 +287,12 @@
     </div>
     <div class="step-item reveal">
       <div class="step-num">04</div>
-      <h4>Execution & Installation</h4>
+      <h4>Execution &amp; Installation</h4>
       <p>Our skilled craftsmen execute the design with precision, 100+ quality checks, and zero mess.</p>
     </div>
     <div class="step-item reveal">
       <div class="step-num">05</div>
-      <h4>Move In & Handover</h4>
+      <h4>Move In &amp; Handover</h4>
       <p>Move into your dream home within 45 days — guaranteed. Backed by our lifetime warranty.</p>
     </div>
   </div>
@@ -293,36 +314,36 @@
     <button class="filter-btn" data-filter="office">Office</button>
   </div>
   <div class="portfolio-grid" id="portfolioGrid">
-    <div class="portfolio-item wide" data-category="living">
-      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=80" alt="Modern Living Room" loading="lazy" />
+    <div class="portfolio-item" data-category="living">
+      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=80" alt="Modern Living Room" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('img-fallback')" />
       <div class="portfolio-overlay"><div class="portfolio-info"><h4>Modern Luxe Living</h4><span>Living Room</span></div></div>
     </div>
     <div class="portfolio-item" data-category="kitchen">
-      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Modern Kitchen" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Modern Kitchen" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('img-fallback')" />
       <div class="portfolio-overlay"><div class="portfolio-info"><h4>Matte Black Kitchen</h4><span>Kitchen</span></div></div>
     </div>
-    <div class="portfolio-item tall" data-category="bedroom">
-      <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80" alt="Bedroom" loading="lazy" />
+    <div class="portfolio-item" data-category="bedroom">
+      <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80" alt="Bedroom" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('img-fallback')" />
       <div class="portfolio-overlay"><div class="portfolio-info"><h4>Minimal Master Suite</h4><span>Bedroom</span></div></div>
     </div>
     <div class="portfolio-item" data-category="living">
-      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Living Room" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Living Room" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('img-fallback')" />
       <div class="portfolio-overlay"><div class="portfolio-info"><h4>Contemporary Lounge</h4><span>Living Room</span></div></div>
     </div>
     <div class="portfolio-item" data-category="bathroom">
-      <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Bathroom" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Bathroom" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('img-fallback')" />
       <div class="portfolio-overlay"><div class="portfolio-info"><h4>Spa-Style Bathroom</h4><span>Bathroom</span></div></div>
     </div>
-    <div class="portfolio-item wide" data-category="office">
-      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80" alt="Office" loading="lazy" />
+    <div class="portfolio-item" data-category="office">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80" alt="Office" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('img-fallback')" />
       <div class="portfolio-overlay"><div class="portfolio-info"><h4>Executive Office Space</h4><span>Office</span></div></div>
     </div>
     <div class="portfolio-item" data-category="kitchen">
-      <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=600&q=80" alt="Kitchen 2" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=600&q=80" alt="Kitchen 2" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('img-fallback')" />
       <div class="portfolio-overlay"><div class="portfolio-info"><h4>Scandinavian Kitchen</h4><span>Kitchen</span></div></div>
     </div>
     <div class="portfolio-item" data-category="living">
-      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Living 2" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Living 2" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('img-fallback')" />
       <div class="portfolio-overlay"><div class="portfolio-info"><h4>Warm Bohemian Living</h4><span>Living Room</span></div></div>
     </div>
   </div>
@@ -387,11 +408,11 @@
       </div>
       <div class="result-content" id="resultContent">
         <div class="result-label">Estimated Price Range</div>
-        <div class="result-price" id="resultPrice">₹0</div>
+        <div class="result-price" id="resultPrice">&#8377;0</div>
         <div class="result-price-sub" id="resultSub">Based on your selections</div>
         <div class="result-breakdown" id="resultBreakdown"></div>
         <ul class="result-includes">
-          <li><i class="fa-solid fa-check"></i> Design & 3D Visualization</li>
+          <li><i class="fa-solid fa-check"></i> Design &amp; 3D Visualization</li>
           <li><i class="fa-solid fa-check"></i> Project Management</li>
           <li><i class="fa-solid fa-check"></i> 100+ Quality Checks</li>
           <li><i class="fa-solid fa-check"></i> Lifetime Warranty on Products</li>
@@ -409,7 +430,7 @@
 <section id="why-us">
   <div class="why-grid">
     <div class="why-image reveal-left">
-      <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80" alt="Why HiLook Interior" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80" alt="Why HiLook Interior" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('img-fallback')" />
       <div class="why-badge-float">
         <div class="big-num">15+</div>
         <p>Years of Design<br/>Excellence</p>
@@ -470,7 +491,7 @@
   <div class="packages-grid">
     <div class="package-card reveal">
       <div class="package-name">Essential</div>
-      <div class="package-price">₹3.5L+</div>
+      <div class="package-price">&#8377;3.5L+</div>
       <div class="package-price-sub">Starting price for 1 BHK</div>
       <ul class="package-features">
         <li><i class="fa-solid fa-check"></i> Full home interior design</li>
@@ -486,7 +507,7 @@
     <div class="package-card featured reveal">
       <div class="featured-tag">Popular</div>
       <div class="package-name">Premium</div>
-      <div class="package-price" style="color:var(--primary)">₹6.5L+</div>
+      <div class="package-price" style="color:var(--primary)">&#8377;6.5L+</div>
       <div class="package-price-sub" style="color:rgba(255,255,255,0.4)">Starting price for 2 BHK</div>
       <ul class="package-features">
         <li><i class="fa-solid fa-check"></i> Complete turnkey interior</li>
@@ -501,7 +522,7 @@
     </div>
     <div class="package-card reveal">
       <div class="package-name">Luxury</div>
-      <div class="package-price">₹14L+</div>
+      <div class="package-price">&#8377;14L+</div>
       <div class="package-price-sub">Starting price for 3 BHK</div>
       <ul class="package-features">
         <li><i class="fa-solid fa-check"></i> Ultra-luxury full home</li>
@@ -530,8 +551,8 @@
         <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
         <p class="testimonial-text">"HiLook transformed our 3BHK completely within 42 days. The 3D visualization was spot-on and the craftsmen were incredibly professional. Every single detail was perfect."</p>
         <div class="testimonial-author">
-          <div class="author-avatar">RK</div>
-          <div class="author-info"><h5>Rajesh Kumar</h5><span>3 BHK, Chennai</span></div>
+          <div class="author-avatar">SP</div>
+          <div class="author-info"><h5>Saravanaprabhu</h5><span>3 BHK, Chennai</span></div>
         </div>
       </div>
       <div class="testimonial-card">
@@ -589,7 +610,42 @@
   <p>Book a free consultation today and get a personalised design proposal within 48 hours.</p>
   <div class="cta-actions">
     <a href="#contact" class="btn-dark"><i class="fa-solid fa-calendar-check"></i> Book Free Consultation</a>
-    <a href="tel:+919876543210" class="btn-outline-dark"><i class="fa-solid fa-phone"></i> Call Us Now</a>
+    <a href="tel:+919380231241" class="btn-outline-dark"><i class="fa-solid fa-phone"></i> Call Us Now</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-header center">
+    <span class="section-tag">FAQ</span>
+    <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+    <p class="section-sub">Everything you need to know before starting your interior design journey.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <div class="faq-q">How long does a full home interior project take? <i class="fa-solid fa-plus"></i></div>
+      <div class="faq-a">For a standard 2-3 BHK apartment, our projects typically take 30-45 days from design approval to handover. We offer a 45-day move-in guarantee on all projects.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">What is included in the project cost? <i class="fa-solid fa-plus"></i></div>
+      <div class="faq-a">Our pricing is fully transparent and includes design consultation, 3D visualization, all materials, manufacturing, transportation, installation, and project management. No hidden charges.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">Do you offer EMI or finance options? <i class="fa-solid fa-plus"></i></div>
+      <div class="faq-a">Yes! We offer easy EMI options starting from 0% interest through our banking partners. You can pay in installments — typically 30% to start, 60% during execution, and 10% on handover.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">What warranty do you provide? <i class="fa-solid fa-plus"></i></div>
+      <div class="faq-a">We offer a lifetime warranty on all HiLook-manufactured products (modular kitchen, wardrobes, storage units) and a 1-year warranty on all civil work including painting, flooring, and false ceilings.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">Can I make changes after the design is approved? <i class="fa-solid fa-plus"></i></div>
+      <div class="faq-a">Yes, minor changes can be accommodated during the early execution phase. Major design changes may affect cost and timeline. We encourage thorough review during the design phase to minimise revisions.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">Do you work outside major cities? <i class="fa-solid fa-plus"></i></div>
+      <div class="faq-a">Currently we serve Chennai, Bangalore, Mumbai, Hyderabad, Delhi NCR, Pune, and Coimbatore. We're rapidly expanding — contact us if your city isn't listed, and we'll let you know when we're available.</div>
+    </div>
   </div>
 </section>
 
@@ -607,7 +663,7 @@
       <div class="contact-items">
         <div class="contact-item">
           <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
-          <div class="contact-item-text"><h5>Phone & WhatsApp</h5><p>+91 98765 43210</p></div>
+          <div class="contact-item-text"><h5>Phone &amp; WhatsApp</h5><p>+91 93802 31241</p></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
@@ -615,11 +671,11 @@
         </div>
         <div class="contact-item">
           <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="contact-item-text"><h5>Experience Centers</h5><p>Chennai · Bangalore · Mumbai · Hyderabad</p></div>
+          <div class="contact-item-text"><h5>Experience Centers</h5><p>Chennai &middot; Bangalore &middot; Mumbai &middot; Hyderabad</p></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
-          <div class="contact-item-text"><h5>Working Hours</h5><p>Mon – Sat: 9:00 AM – 7:00 PM</p></div>
+          <div class="contact-item-text"><h5>Working Hours</h5><p>Mon &ndash; Sat: 9:00 AM &ndash; 7:00 PM</p></div>
         </div>
       </div>
       <div class="contact-socials">
@@ -640,7 +696,7 @@
           </div>
           <div class="form-group">
             <label>Phone Number *</label>
-            <input type="tel" id="fphone" placeholder="+91 98765 43210" />
+            <input type="tel" id="fphone" placeholder="+91 93802 31241" />
           </div>
         </div>
         <div class="form-row">
@@ -698,11 +754,11 @@
             <label>Budget Range</label>
             <select id="fbudget">
               <option value="">Select Budget</option>
-              <option>₹2L – ₹5L</option>
-              <option>₹5L – ₹10L</option>
-              <option>₹10L – ₹20L</option>
-              <option>₹20L – ₹50L</option>
-              <option>₹50L+</option>
+              <option>&#8377;2L &ndash; &#8377;5L</option>
+              <option>&#8377;5L &ndash; &#8377;10L</option>
+              <option>&#8377;10L &ndash; &#8377;20L</option>
+              <option>&#8377;20L &ndash; &#8377;50L</option>
+              <option>&#8377;50L+</option>
             </select>
           </div>
           <div class="form-group">
@@ -772,8 +828,8 @@
         <li><a href="#packages">Packages</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#">Careers</a></li>
       </ul>
     </div>
     <div class="footer-newsletter">
@@ -800,10 +856,18 @@
   <a href="https://t.me/Hilookinterior_bot" target="_blank" class="float-btn telegram">
     <i class="fa-brands fa-telegram"></i> Chat on Telegram
   </a>
+  <a href="https://wa.me/919380231241" target="_blank" class="float-btn whatsapp">
+    <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+  </a>
   <a href="#contact" class="float-btn">
     <i class="fa-solid fa-star"></i> Free Quote
   </a>
 </div>
+
+<!-- BACK TO TOP BUTTON -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
 
 <!-- QUOTE MODAL (from calculator) -->
 <div class="modal-overlay" id="quoteModal">
@@ -812,7 +876,7 @@
     <h3 style="font-family:var(--font-heading);color:var(--white);font-size:1.5rem;margin-bottom:8px">Send My Quote</h3>
     <p style="color:rgba(255,255,255,0.5);font-size:0.88rem;margin-bottom:28px">Enter your details and we'll send the full quote to you instantly.</p>
     <div class="form-group"><label>Full Name</label><input type="text" id="mname" placeholder="Your name" /></div>
-    <div class="form-group"><label>Phone Number</label><input type="tel" id="mphone" placeholder="+91 98765 43210" /></div>
+    <div class="form-group"><label>Phone Number</label><input type="tel" id="mphone" placeholder="+91 93802 31241" /></div>
     <div class="form-group"><label>Email</label><input type="email" id="memail" placeholder="your@email.com" /></div>
     <button class="form-submit" id="modalSubmitBtn" onclick="submitModalQuote()">
       <span class="btn-text"><i class="fa-brands fa-telegram"></i> Send My Quote Now</span>
