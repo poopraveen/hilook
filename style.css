@@ -1143,9 +1143,12 @@ footer {
 .float-btn.telegram:hover { box-shadow: 0 16px 50px rgba(34,158,217,0.4); }
 .float-btn.whatsapp {
   background: #25D366; color: var(--white);
-  box-shadow: 0 8px 30px rgba(37,211,102,0.3);
+  box-shadow: 0 8px 30px rgba(37,211,102,0.35) !important;
 }
-.float-btn.whatsapp:hover { box-shadow: 0 16px 50px rgba(37,211,102,0.4); }
+.float-btn.whatsapp:hover {
+  box-shadow: 0 16px 50px rgba(37,211,102,0.5) !important;
+  transform: translateY(-3px);
+}
 
 /* Mobile: icon-only circles */
 @media (max-width: 600px) {
