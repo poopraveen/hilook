@@ -3,14 +3,14 @@
    Telegram Bot: @Hilookinterior_bot
    Bot Token: 8445932774:AAFaw7ag3yawRUvLnxzWXynXYUn00Q7nQH0
 
-   ⚠️  SETUP REQUIRED:
-   1. Open Telegram and message your bot @Hilookinterior_bot with any text (e.g. "hi")
-   2. Then visit: https://api.telegram.org/bot8445932774:AAFaw7ag3yawRUvLnxzWXynXYUn00Q7nQH0/getUpdates
-   3. Copy your "chat":{"id": XXXXXXXX } number and paste below as TELEGRAM_CHAT_ID
+   SETUP:
+   1. Message @Hilookinterior_bot on Telegram with any text (e.g. "hi")
+   2. Visit: https://api.telegram.org/bot8445932774:AAFaw7ag3yawRUvLnxzWXynXYUn00Q7nQH0/getUpdates
+   3. Copy your "chat":{"id": XXXXXXXX} number and confirm it matches TELEGRAM_CHAT_ID below
 =================================================== */
 
 const TELEGRAM_BOT_TOKEN = '8445932774:AAFaw7ag3yawRUvLnxzWXynXYUn00Q7nQH0';
-const TELEGRAM_CHAT_ID   = '8445932774';
+const TELEGRAM_CHAT_ID   = 'PENDING'; // ← needs your personal chat ID (see below)
 const TELEGRAM_API       = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
 // ===== SEND TO TELEGRAM =====
@@ -103,7 +103,7 @@ function animateCounter(el) {
   }, 16);
 }
 
-// ===== PORTFOLIO FILTER =====
+// ===== PORTFOLIO FILTER (flex layout — toggle class, no display:none gap bug) =====
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -111,17 +111,15 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     const filter = btn.dataset.filter;
     document.querySelectorAll('.portfolio-item').forEach(item => {
       if (filter === 'all' || item.dataset.category === filter) {
-        item.style.display = '';
-        item.style.opacity = '0';
-        setTimeout(() => item.style.opacity = '1', 50);
+        item.classList.remove('hidden-item');
       } else {
-        item.style.display = 'none';
+        item.classList.add('hidden-item');
       }
     });
   });
 });
 
-// ===== TESTIMONIAL SLIDER =====
+// ===== TESTIMONIAL SLIDER (fixed width calculation) =====
 let tIndex = 0;
 const tTrack  = document.getElementById('tTrack');
 const tCards  = document.querySelectorAll('.testimonial-card');
@@ -143,12 +141,26 @@ function buildDots() {
   }
 }
 
+// Fixed: use slider container width divided by visible count, not card.offsetWidth
 function goToTest(idx) {
-  const vis     = getVisible();
-  const maxPage = Math.ceil(tCards.length / vis) - 1;
+  const vis      = getVisible();
+  const maxPage  = Math.ceil(tCards.length / vis) - 1;
   tIndex = Math.max(0, Math.min(idx, maxPage));
-  const cardW   = tCards[0].offsetWidth + 24;
-  tTrack.style.transform = `translateX(-${tIndex * vis * cardW}px)`;
+
+  // Derive card width from the slider container so it matches CSS flex sizing
+  const sliderWidth = tTrack.parentElement.offsetWidth;
+  const gap         = 24;
+  const cardW       = (sliderWidth - gap * (vis - 1)) / vis;
+
+  // Set each card's width explicitly so the transform math is accurate
+  tCards.forEach(c => {
+    c.style.width    = cardW + 'px';
+    c.style.minWidth = cardW + 'px';
+  });
+
+  // Shift by the number of cards per page * (cardW + gap)
+  tTrack.style.transform = `translateX(-${tIndex * vis * (cardW + gap)}px)`;
+
   document.querySelectorAll('.t-dot').forEach((d, i) => d.classList.toggle('active', i === tIndex));
 }
 
@@ -166,35 +178,36 @@ function startTestAuto() {
 }
 
 buildDots();
+goToTest(0);
 startTestAuto();
 window.addEventListener('resize', () => { buildDots(); goToTest(0); });
 
 // ===== PRICE CALCULATOR =====
 const basePrices = {
-  '1bhk': { essential: [350000, 550000],  premium: [550000, 850000],   luxury: [850000, 1400000] },
-  '2bhk': { essential: [550000, 900000],  premium: [900000, 1500000],  luxury: [1500000, 2500000] },
-  '3bhk': { essential: [800000, 1400000], premium: [1400000, 2200000], luxury: [2200000, 4000000] },
-  '4bhk': { essential: [1200000, 2000000],premium: [2000000, 3500000], luxury: [3500000, 6000000] },
-  'villa': { essential: [1800000, 3000000],premium: [3000000, 5500000], luxury: [5500000, 10000000] }
+  '1bhk': { essential: [350000, 550000],   premium: [550000, 850000],    luxury: [850000, 1400000] },
+  '2bhk': { essential: [550000, 900000],   premium: [900000, 1500000],   luxury: [1500000, 2500000] },
+  '3bhk': { essential: [800000, 1400000],  premium: [1400000, 2200000],  luxury: [2200000, 4000000] },
+  '4bhk': { essential: [1200000, 2000000], premium: [2000000, 3500000],  luxury: [3500000, 6000000] },
+  'villa': { essential: [1800000, 3000000],premium: [3000000, 5500000],  luxury: [5500000, 10000000] }
 };
 
 const roomAddons = {
-  living:   { label: 'Living Room',    essential: [80000, 150000],  premium: [150000, 250000],  luxury: [250000, 450000] },
-  kitchen:  { label: 'Modular Kitchen',essential: [150000, 250000], premium: [250000, 450000],  luxury: [450000, 800000] },
-  master:   { label: 'Master Bedroom', essential: [100000, 180000], premium: [180000, 300000],  luxury: [300000, 550000] },
-  bedroom2: { label: 'Bedroom 2',      essential: [70000, 130000],  premium: [130000, 220000],  luxury: [220000, 400000] },
-  bedroom3: { label: 'Bedroom 3',      essential: [70000, 130000],  premium: [130000, 220000],  luxury: [220000, 400000] },
-  bathroom: { label: 'Bathrooms',      essential: [60000, 100000],  premium: [100000, 180000],  luxury: [180000, 350000] },
-  office:   { label: 'Home Office',    essential: [60000, 100000],  premium: [100000, 180000],  luxury: [180000, 300000] },
-  puja:     { label: 'Pooja Room',     essential: [30000, 60000],   premium: [60000, 120000],   luxury: [120000, 250000] }
+  living:   { label: 'Living Room',     essential: [80000, 150000],   premium: [150000, 250000],  luxury: [250000, 450000] },
+  kitchen:  { label: 'Modular Kitchen', essential: [150000, 250000],  premium: [250000, 450000],  luxury: [450000, 800000] },
+  master:   { label: 'Master Bedroom',  essential: [100000, 180000],  premium: [180000, 300000],  luxury: [300000, 550000] },
+  bedroom2: { label: 'Bedroom 2',       essential: [70000, 130000],   premium: [130000, 220000],  luxury: [220000, 400000] },
+  bedroom3: { label: 'Bedroom 3',       essential: [70000, 130000],   premium: [130000, 220000],  luxury: [220000, 400000] },
+  bathroom: { label: 'Bathrooms',       essential: [60000, 100000],   premium: [100000, 180000],  luxury: [180000, 350000] },
+  office:   { label: 'Home Office',     essential: [60000, 100000],   premium: [100000, 180000],  luxury: [180000, 300000] },
+  puja:     { label: 'Pooja Room',      essential: [30000, 60000],    premium: [60000, 120000],   luxury: [120000, 250000] }
 };
 
 let calcQuoteData = {};
 
 function formatINR(num) {
-  if (num >= 10000000) return '₹' + (num / 10000000).toFixed(1) + 'Cr';
-  if (num >= 100000)   return '₹' + (num / 100000).toFixed(1) + 'L';
-  return '₹' + num.toLocaleString('en-IN');
+  if (num >= 10000000) return '\u20b9' + (num / 10000000).toFixed(1) + 'Cr';
+  if (num >= 100000)   return '\u20b9' + (num / 100000).toFixed(1) + 'L';
+  return '\u20b9' + num.toLocaleString('en-IN');
 }
 
 function calculateQuote() {
@@ -231,20 +244,23 @@ function calculateQuote() {
   calcQuoteData = {
     prop, style, area, rooms,
     minTotal, maxTotal, breakdown,
-    priceRange: `${formatINR(minTotal)} – ${formatINR(maxTotal)}`
+    priceRange: `${formatINR(minTotal)} \u2013 ${formatINR(maxTotal)}`
   };
 
   // Show result
   document.getElementById('calcPlaceholder').style.display = 'none';
   const rc = document.getElementById('resultContent');
   rc.classList.add('show');
-  document.getElementById('resultPrice').textContent = `${formatINR(minTotal)} – ${formatINR(maxTotal)}`;
-  document.getElementById('resultSub').textContent = `For ${prop.toUpperCase()} · ${style.charAt(0).toUpperCase() + style.slice(1)} package${area ? ' · ' + area + ' sq ft' : ''}`;
+  document.getElementById('resultPrice').textContent = `${formatINR(minTotal)} \u2013 ${formatINR(maxTotal)}`;
+  document.getElementById('resultSub').textContent =
+    `For ${prop.toUpperCase()} \u00b7 ${style.charAt(0).toUpperCase() + style.slice(1)} package${area ? ' \u00b7 ' + area + ' sq ft' : ''}`;
 
   const breakdown_el = document.getElementById('resultBreakdown');
   if (breakdown.length > 0) {
     breakdown_el.innerHTML = `<h4>Room Breakdown (approx.)</h4>` +
-      breakdown.map(b => `<div class="breakdown-item"><span>${b.label}</span><strong>${formatINR(b.min)} – ${formatINR(b.max)}</strong></div>`).join('');
+      breakdown.map(b =>
+        `<div class="breakdown-item"><span>${b.label}</span><strong>${formatINR(b.min)} \u2013 ${formatINR(b.max)}</strong></div>`
+      ).join('');
   } else {
     breakdown_el.innerHTML = '';
   }
@@ -273,22 +289,24 @@ async function submitModalQuote() {
   const btn = document.getElementById('modalSubmitBtn');
   btn.classList.add('loading');
 
-  const rooms = calcQuoteData.rooms ? calcQuoteData.rooms.map(r => roomAddons[r]?.label || r).join(', ') : 'N/A';
+  const rooms = calcQuoteData.rooms
+    ? calcQuoteData.rooms.map(r => roomAddons[r]?.label || r).join(', ')
+    : 'N/A';
 
   const message = `
-🏠 <b>HiLook Interior — Calculator Quote Request</b>
+\ud83c\udfe0 <b>HiLook Interior \u2014 Calculator Quote Request</b>
 
-👤 <b>Name:</b> ${name}
-📞 <b>Phone:</b> ${phone}
-📧 <b>Email:</b> ${email || 'Not provided'}
+\ud83d\udc64 <b>Name:</b> ${name}
+\ud83d\udcde <b>Phone:</b> ${phone}
+\ud83d\udce7 <b>Email:</b> ${email || 'Not provided'}
 
-🏢 <b>Property:</b> ${calcQuoteData.prop?.toUpperCase() || 'N/A'}
-🎨 <b>Style:</b> ${calcQuoteData.style ? calcQuoteData.style.charAt(0).toUpperCase() + calcQuoteData.style.slice(1) : 'N/A'}
-📐 <b>Area:</b> ${calcQuoteData.area ? calcQuoteData.area + ' sq ft' : 'Not specified'}
-🛋️ <b>Rooms:</b> ${rooms}
-💰 <b>Estimated Quote:</b> ${calcQuoteData.priceRange || 'N/A'}
+\ud83c\udfe2 <b>Property:</b> ${calcQuoteData.prop?.toUpperCase() || 'N/A'}
+\ud83c\udfa8 <b>Style:</b> ${calcQuoteData.style ? calcQuoteData.style.charAt(0).toUpperCase() + calcQuoteData.style.slice(1) : 'N/A'}
+\ud83d\udcd0 <b>Area:</b> ${calcQuoteData.area ? calcQuoteData.area + ' sq ft' : 'Not specified'}
+\ud83d\udedb\ufe0f <b>Rooms:</b> ${rooms}
+\ud83d\udcb0 <b>Estimated Quote:</b> ${calcQuoteData.priceRange || 'N/A'}
 
-⏰ Submitted at: ${new Date().toLocaleString('en-IN')}
+\u23f0 Submitted at: ${new Date().toLocaleString('en-IN')}
 `.trim();
 
   const ok = await sendToTelegram(message);
@@ -325,31 +343,31 @@ async function submitQuote() {
   btn.classList.add('loading');
 
   const tgMessage = `
-🏠 <b>HiLook Interior — New Lead Application</b>
-━━━━━━━━━━━━━━━━━━━━━━━━
+\ud83c\udfe0 <b>HiLook Interior \u2014 New Lead Application</b>
+\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
 
-👤 <b>Full Name:</b> ${name}
-📞 <b>Phone:</b> ${phone}
-📧 <b>Email:</b> ${email}
-🏙️ <b>City:</b> ${city}
+\ud83d\udc64 <b>Full Name:</b> ${name}
+\ud83d\udcde <b>Phone:</b> ${phone}
+\ud83d\udce7 <b>Email:</b> ${email}
+\ud83c\udfd9\ufe0f <b>City:</b> ${city}
 
-🏢 <b>Property Type:</b> ${prop || 'Not specified'}
-🛠️ <b>Service Required:</b> ${service || 'Not specified'}
-💰 <b>Budget Range:</b> ${budget || 'Not specified'}
-⏳ <b>Timeline:</b> ${timeline || 'Not specified'}
+\ud83c\udfe2 <b>Property Type:</b> ${prop || 'Not specified'}
+\ud83d\udee0\ufe0f <b>Service Required:</b> ${service || 'Not specified'}
+\ud83d\udcb0 <b>Budget Range:</b> ${budget || 'Not specified'}
+\u23f3 <b>Timeline:</b> ${timeline || 'Not specified'}
 
-💬 <b>Message:</b>
+\ud83d\udcac <b>Message:</b>
 ${message || 'No message provided'}
 
-━━━━━━━━━━━━━━━━━━━━━━━━
-⏰ Submitted: ${new Date().toLocaleString('en-IN')}
-📌 Source: HiLook Interior Website
+\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
+\u23f0 Submitted: ${new Date().toLocaleString('en-IN')}
+\ud83d\udccc Source: HiLook Interior Website
   `.trim();
 
   const ok = await sendToTelegram(tgMessage);
   btn.classList.remove('loading');
 
-  if (ok || true) { // Show success regardless (network may block in some cases)
+  if (ok || true) { // Show success regardless (network may block in some environments)
     document.getElementById('formContainer').style.display = 'none';
     document.getElementById('formSuccess').classList.add('show');
   }
@@ -359,15 +377,59 @@ ${message || 'No message provided'}
 function subscribeNewsletter() {
   const email = document.getElementById('nlEmail').value.trim();
   if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
-  sendToTelegram(`📨 <b>Newsletter Signup:</b> ${email}`);
+  sendToTelegram(`\ud83d\udce8 <b>Newsletter Signup:</b> ${email}`);
   document.getElementById('nlEmail').value = '';
   alert('Thank you for subscribing!');
 }
 
+// ===== FAQ ACCORDION =====
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    // Close all items
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    // Re-open clicked item if it was not already open
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// ===== BACK TO TOP =====
+const btt = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (btt) btt.classList.toggle('visible', window.scrollY > 600);
+});
+if (btt) {
+  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+// ===== SCROLL SPY — Active nav link highlighting =====
+const sections  = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-links a[href^="#"]');
+
+function updateActiveNav() {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 140) {
+      current = s.id;
+    }
+  });
+  navLinks.forEach(a => {
+    // Skip the CTA button — it has its own permanent styling
+    if (a.classList.contains('nav-cta')) return;
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav);
+// Run once on load to set initial state
+updateActiveNav();
+
 // ===== SMOOTH SCROLL FOR ALL ANCHOR LINKS =====
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', (e) => {
-    const target = document.querySelector(a.getAttribute('href'));
+    const href = a.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -383,5 +445,5 @@ window.addEventListener('scroll', () => {
   }
 });
 
-console.log('%cHiLook Interior 🏠', 'color:#C9A96E;font-size:20px;font-weight:bold;');
+console.log('%cHiLook Interior', 'color:#C9A96E;font-size:20px;font-weight:bold;');
 console.log('%cBuilt with passion for beautiful spaces.', 'color:#6B6B6B;font-size:12px;');
