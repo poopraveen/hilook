@@ -10,7 +10,7 @@
 =================================================== */
 
 const TELEGRAM_BOT_TOKEN = '8445932774:AAFaw7ag3yawRUvLnxzWXynXYUn00Q7nQH0';
-const TELEGRAM_CHAT_ID   = 'PENDING'; // ← needs your personal chat ID (see below)
+const TELEGRAM_CHAT_ID   = '8563634578';
 const TELEGRAM_API       = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
 // ===== SEND TO TELEGRAM =====
